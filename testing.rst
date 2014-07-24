@@ -16,6 +16,27 @@ Vagrant allows us to configure servers using a number provisioning options.
 While we prefer Puppet_ for production environments, for immutable_ utility
 servers and prototyping, shell scripts work quite well.
 
+First you install Vagrant from the upstream ``.deb`` files because the
+Debian ones are not up to date enough::
+
+  wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
+  sudo dpkg -i vagrant_1.6.3_x86_64.deb
+
+The latest version may vary of course, since this was written, look at
+the `download page <http://www.vagrantup.com/downloads.html>`_ for the
+latest version. You will also need a Virtualbox install::
+
+  sudo apt-get install virtualbox
+
+The next step is to fetch the Vagrant/Puppet code from git::
+
+  git clone https://github.com/GetValkyrie/anthology
+
+Then you're ready to setup your vagrant host::
+
+  cd anthology
+  vagrant up host
+
 .. todo::
   Research Ansible, which appears to be quite straight-forward, in comparison
   to Puppet, and is configured using YAML.
