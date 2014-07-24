@@ -32,10 +32,10 @@ The next step is to fetch the Vagrant/Puppet code from git::
 
   git clone https://github.com/GetValkyrie/anthology
 
-Then you're ready to setup your vagrant host::
+Then you're ready to setup vagrant hosts, for example to setup ``gitlab``::
 
   cd anthology
-  vagrant up host
+  vagrant up gitlab
 
 .. todo::
   Research Ansible, which appears to be quite straight-forward, in comparison
